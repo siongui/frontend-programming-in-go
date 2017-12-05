@@ -18,7 +18,7 @@ devserver: fmt js
 
 js:
 	@echo "\033[92mGenerating JavaScript ...\033[0m"
-	@gopherjs build $(WEBSITE_DIR)/*.go -o $(WEBSITE_DIR)/app.js
+	@gopherjs build $(WEBSITE_DIR)/appdom.go -o $(WEBSITE_DIR)/app.js
 
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"
@@ -27,6 +27,14 @@ fmt:
 lib_gopherjs:
 	@echo "\033[92mInstalling GopherJS ...\033[0m"
 	go get -u github.com/gopherjs/gopherjs
+
+lib_godom:
+	@echo "\033[92mInstalling godom ...\033[0m"
+	go get -u github.com/siongui/godom
+
+clean:
+	rm $(WEBSITE_DIR)/*.js
+	rm $(WEBSITE_DIR)/*.js.map
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"
