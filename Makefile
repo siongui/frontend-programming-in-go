@@ -9,16 +9,16 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=001-hello-world
+WEBSITE_DIR=004-innerHTML-textContent
 
 devserver: fmt js
 	@# http://stackoverflow.com/a/5947779
 	@echo "\033[92mDevelopment Server Running ...\033[0m"
-	@go run server.go
+	@go run server.go -dir=$(WEBSITE_DIR)
 
 js:
 	@echo "\033[92mGenerating JavaScript ...\033[0m"
-	@gopherjs build $(WEBSITE_DIR)/appdom.go -o $(WEBSITE_DIR)/app.js
+	@gopherjs build $(WEBSITE_DIR)/app.go -o $(WEBSITE_DIR)/app.js
 
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"

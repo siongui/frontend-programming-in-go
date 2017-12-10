@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"net/http"
 	"os"
@@ -24,5 +25,7 @@ func FileServerWithCustom404(fs http.FileSystem) http.Handler {
 }
 
 func main() {
-	http.ListenAndServe(":8000", FileServerWithCustom404(http.Dir("001-hello-world")))
+	dir := flag.String("dir", "001-hello-world", "dir to be compiled")
+	flag.Parse()
+	http.ListenAndServe(":8000", FileServerWithCustom404(http.Dir(*dir)))
 }
