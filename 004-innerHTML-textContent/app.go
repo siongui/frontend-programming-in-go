@@ -6,5 +6,11 @@ import (
 
 func main() {
 	f := js.Global.Get("document").Call("querySelector", "#foo")
-	f.Set("innerHTML", "Hello World")
+	f.Set("innerHTML", "<strong>Hello World</strong>")
+
+	println(f.Get("innerHTML").String())
+
+	f.Set("textContent", "Hello World2")
+
+	println(f.Get("textContent").String())
 }
