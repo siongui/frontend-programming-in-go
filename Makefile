@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=005-addEventListener
+WEBSITE_DIR=006-keyboard-event
 
 devserver: fmt js
 	@# http://stackoverflow.com/a/5947779
