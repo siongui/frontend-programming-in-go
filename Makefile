@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=006-keyboard-event
+WEBSITE_DIR=007-create-append-element
 
 devserver: fmt js
 	@# http://stackoverflow.com/a/5947779
