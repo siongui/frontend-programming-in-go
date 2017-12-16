@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=009-html-data-attribute
+WEBSITE_DIR=010-element-style
 
 devserver: fmt js
 	@# http://stackoverflow.com/a/5947779
