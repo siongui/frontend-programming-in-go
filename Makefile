@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=003-querySelector-querySelectorAll-getElementById
+WEBSITE_DIR=011-element-classlist
 
 default: fmt js devserver
 defaultdom: fmt domjs devserver
