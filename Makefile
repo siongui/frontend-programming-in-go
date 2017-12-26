@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=012-setTimeout
+WEBSITE_DIR=013-navigator-language
 
 default: fmt js devserver
 defaultdom: fmt domjs devserver
