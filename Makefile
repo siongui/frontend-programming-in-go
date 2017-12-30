@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=014-javascript-null-test
+WEBSITE_DIR=015-javascript-undefined-test
 
 default: fmt js devserver
 defaultdom: fmt domjs devserver
