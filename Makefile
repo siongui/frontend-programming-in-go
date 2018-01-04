@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=016-show-css-loader
+WEBSITE_DIR=017-element-position
 
 default: fmt js devserver
 defaultdom: fmt domjs devserver
