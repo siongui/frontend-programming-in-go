@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=017-element-position
+WEBSITE_DIR=018-tooltip
 
 default: fmt js devserver
 defaultdom: fmt domjs devserver
