@@ -9,11 +9,11 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=018-tooltip
+WEBSITE_DIR=019-tooltip-with-close-delay
 
 default: fmt js devserver
-defaultdom: fmt domjs devserver
-defaultjs: fmt devserver
+godom: fmt domjs devserver
+rawjs: fmt devserver
 
 devserver:
 	@# http://stackoverflow.com/a/5947779
