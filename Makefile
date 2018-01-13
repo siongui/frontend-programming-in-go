@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=019-tooltip-with-close-delay
+WEBSITE_DIR=020-convert-text-to-link
 
 default: fmt js devserver
 godom: fmt domjs devserver
