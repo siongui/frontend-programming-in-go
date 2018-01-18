@@ -9,10 +9,10 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=020-convert-text-to-link
+WEBSITE_DIR=021-bulma-navbar
 
-default: fmt js devserver
 godom: fmt domjs devserver
+default: fmt js devserver
 rawjs: fmt devserver
 
 devserver:
