@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Toggle (Show/Hide) HTML Element via gopherjs-vue</title>
+</head>
+<body>
+
+<div id="app">
+  <div v-on:click="isShow = !isShow">
+    click me to toggle (show/hide) HTML element
+  </div>
+  <div v-show="isShow">I am element being toggled</div>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

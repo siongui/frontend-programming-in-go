@@ -9,10 +9,10 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=021-bulma-navbar
+WEBSITE_DIR=022-toggle-element-gopherjs-vue
 
-godom: fmt domjs devserver
 default: fmt js devserver
+godom: fmt domjs devserver
 rawjs: fmt devserver
 
 devserver:
@@ -44,6 +44,10 @@ lib_godom:
 clean:
 	rm $(WEBSITE_DIR)/*.js
 	rm $(WEBSITE_DIR)/*.js.map
+
+install_gopherjs-vue:
+	@echo "\033[92mgo get -u github.com/oskca/gopherjs-vue ...\033[0m"
+	go get -u github.com/oskca/gopherjs-vue
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"
