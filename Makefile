@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.2
 
-WEBSITE_DIR=022-toggle-element-gopherjs-vue
+WEBSITE_DIR=023-keyboard-event-gopherjs-vue
 
 default: fmt js devserver
 godom: fmt domjs devserver
