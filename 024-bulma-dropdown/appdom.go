@@ -4,25 +4,11 @@ import (
 	. "github.com/siongui/godom"
 )
 
-func SetupNavbarBurgers() {
-	nbs := Document.QuerySelectorAll(".navbar-burger")
-
-	for _, nb := range nbs {
-		nb.AddEventListener("click", func(e Event) {
-			targetId := nb.Dataset().Get("target").String()
-			target := Document.GetElementById(targetId)
-
-			nb.ClassList().Toggle("is-active")
-			target.ClassList().Toggle("is-active")
-		})
-	}
-}
-
 func main() {
 	Document.AddEventListener("DOMContentLoaded", func(e Event) {
 
-		// Dropdowns in navbar
-		dds := Document.QuerySelectorAll(".navbar-item.has-dropdown:not(.is-hoverable)")
+		// Dropdowns
+		dds := Document.QuerySelectorAll(".dropdown:not(.is-hoverable)")
 
 		closeDropdowns := func() {
 			for _, dd := range dds {
@@ -49,8 +35,5 @@ func main() {
 				closeDropdowns()
 			}
 		})
-
-		// Toggles
-		SetupNavbarBurgers()
 	})
 }

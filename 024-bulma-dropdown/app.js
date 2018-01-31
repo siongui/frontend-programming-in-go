@@ -2,9 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Dropdowns in navbar
+  // Dropdowns
 
-  var $dropdowns = getAll('.navbar-item.has-dropdown:not(.is-hoverable)');
+  var $dropdowns = getAll('.dropdown:not(.is-hoverable)');
 
   if ($dropdowns.length > 0) {
     $dropdowns.forEach(function ($el) {
@@ -32,21 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
       closeDropdowns();
     }
   });
-
-  // Toggles
-
-  var $burgers = getAll('.burger');
-
-  if ($burgers.length > 0) {
-    $burgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
-        var target = $el.dataset.target;
-        var $target = document.getElementById(target);
-        $el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
 
   // Functions
 
