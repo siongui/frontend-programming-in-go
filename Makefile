@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.9.3
 
-WEBSITE_DIR=024-bulma-dropdown
+WEBSITE_DIR=025-tab-url-chrome-extension
 
 default: fmt js devserver
 godom: fmt domjs devserver
@@ -46,8 +46,12 @@ clean:
 	rm $(WEBSITE_DIR)/*.js.map
 
 install_gopherjs-vue:
-	@echo "\033[92mgo get -u github.com/oskca/gopherjs-vue ...\033[0m"
+	@echo "\033[92mInstall binding for Vue.js ...\033[0m"
 	go get -u github.com/oskca/gopherjs-vue
+
+install_chrome:
+	@echo "\033[92mInstall binding for Chrome extension ...\033[0m"
+	go get -u github.com/fabioberger/chrome
 
 update_ubuntu:
 	@echo "\033[92mUpdating Ubuntu ...\033[0m"

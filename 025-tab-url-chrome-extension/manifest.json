@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "tab url",
+  "description": "print url of current active tab",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_title": "tab url",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
