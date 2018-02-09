@@ -7,9 +7,9 @@ ifndef TRAVIS
 	export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 endif
 
-GO_VERSION=1.9.3
+GO_VERSION=1.9.4
 
-WEBSITE_DIR=025-tab-url-chrome-extension
+WEBSITE_DIR=026-bulma-modal
 
 default: fmt js devserver
 godom: fmt domjs devserver
