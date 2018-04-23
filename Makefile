@@ -7,9 +7,9 @@ ifndef TRAVIS
 	export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 endif
 
-GO_VERSION=1.10
+GO_VERSION=1.10.1
 
-WEBSITE_DIR=027-virtula-keypad-gopherjs-vue
+WEBSITE_DIR=028-lemoine-conjecture
 
 default: fmt js devserver
 godom: fmt domjs devserver
