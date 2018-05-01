@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.10.1
 
-WEBSITE_DIR=029-input-text-integer-check
+WEBSITE_DIR=030-sieve-of-eratosthenes-gopherjs-vue
 
 default: fmt js devserver
 godom: fmt domjs devserver
