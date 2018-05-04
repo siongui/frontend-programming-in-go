@@ -7,9 +7,9 @@ ifndef TRAVIS
 	export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 endif
 
-GO_VERSION=1.10.1
+GO_VERSION=1.10.2
 
-WEBSITE_DIR=030-sieve-of-eratosthenes-gopherjs-vue
+WEBSITE_DIR=031-watch-data-change-gopherjs-vue
 
 default: fmt js devserver
 godom: fmt domjs devserver
