@@ -9,7 +9,7 @@ endif
 
 GO_VERSION=1.10.2
 
-WEBSITE_DIR=031-watch-data-change-gopherjs-vue
+WEBSITE_DIR=032-watch-data-change-with-option-gopherjs-vue
 
 default: fmt js devserver
 godom: fmt domjs devserver
