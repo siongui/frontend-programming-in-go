@@ -18,4 +18,4 @@ Examples:
 .. _Go: https://golang.org/dl/
 .. _GopherJS: http://www.gopherjs.org/
 .. _WebAssembly: https://duckduckgo.com/?q=webassembly
-.. _root directory: ..
+.. _root directory: https://github.com/siongui/frontend-programming-in-go
