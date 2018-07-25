@@ -1,0 +1,23 @@
+# cannot use relative path in GOROOT, otherwise 6g not found. For example,
+#   export GOROOT=../go  (=> 6g not found)
+# it is also not allowed to use relative path in GOPATH
+export GOROOT=$(realpath ../../go)
+export GOPATH=$(realpath .)
+export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
+
+
+DIR=001-hello-world
+MODULE=alert.wasm
+
+server: build
+	@echo "\033[92mRunning dev server...\033[0m"
+	go run ../server.go -dir=${DIR}/demo
+
+build: fmt
+	@echo "\033[92mBuild wasm module...\033[0m"
+	GOARCH=wasm GOOS=js go build -o ${DIR}/demo/${MODULE} ${DIR}/*.go
+	cp ${DIR}/index.html ${DIR}/demo/
+
+fmt:
+	@echo "\033[92mGo fmt source code...\033[0m"
+	@go fmt ${DIR}/*.go
