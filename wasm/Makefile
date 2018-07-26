@@ -21,3 +21,6 @@ build: fmt
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"
 	@go fmt ${DIR}/*.go
+
+install:
+	go get -u github.com/siongui/godom/wasm
