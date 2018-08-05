@@ -10,6 +10,12 @@ Development Environment:
   - `Ubuntu 18.04`_
   - Go_ (Go 1.11 or later for Go WebAssembly)
 
+Install:
+
+.. code-block:: bash
+
+  $ GOARCH=wasm GOOS=js go get -u github.com/siongui/godom/wasm
+
 Examples:
 
   - Hello World (`demo <https://siongui.github.io/frontend-programming-in-go/wasm/001-hello-world/demo/>`_)

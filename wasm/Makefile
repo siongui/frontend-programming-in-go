@@ -23,4 +23,4 @@ fmt:
 	@go fmt ${DIR}/*.go
 
 install:
-	go get -u github.com/siongui/godom/wasm
+	GOARCH=wasm GOOS=js go get -u github.com/siongui/godom/wasm
