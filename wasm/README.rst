@@ -10,7 +10,9 @@ Development Environment:
   - `Ubuntu 18.04`_
   - Go_ (Go 1.11 or later for Go WebAssembly)
 
-Install:
+
+Install
++++++++
 
 .. code-block:: bash
 
