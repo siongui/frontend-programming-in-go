@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Go wasm - querySelector</title>
+</head>
+<body>
+  <div id="testdiv"></div>
+
+  <!-- https://github.com/golang/go/blob/master/misc/wasm/wasm_exec.js -->
+  <script src="wasm_exec.js"></script>
+  <script>
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(
+		fetch("query.wasm", {cache: 'no-cache'}), go.importObject).then((result) => {
+		mod = result.module;
+		inst = result.instance;
+		run();
+	});
+	async function run() {
+		await go.run(inst);
+	};
+  </script>
+</body>
+</html>

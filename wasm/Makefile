@@ -6,8 +6,8 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 
-DIR=001-hello-world
-MODULE=alert.wasm
+DIR=002-querySelector
+MODULE=query.wasm
 
 server: build
 	@echo "\033[92mRunning dev server...\033[0m"
