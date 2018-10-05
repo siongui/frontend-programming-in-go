@@ -6,7 +6,7 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 
-DIR=002-querySelector
+DIR=003-querySelectorAll
 MODULE=query.wasm
 
 server: build
