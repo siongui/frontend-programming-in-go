@@ -6,8 +6,8 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 
-DIR=003-querySelectorAll
-MODULE=query.wasm
+DIR=004-addEventListener
+MODULE=click.wasm
 
 server: build
 	@echo "\033[92mRunning dev server...\033[0m"
@@ -17,6 +17,7 @@ build: fmt
 	@echo "\033[92mBuild wasm module...\033[0m"
 	GOARCH=wasm GOOS=js go build -o ${DIR}/demo/${MODULE} ${DIR}/*.go
 	cp ${DIR}/index.html ${DIR}/demo/
+	cd ${DIR}/demo/ ; ln -sf ../../001-hello-world/demo/wasm_exec.js wasm_exec.js
 
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"

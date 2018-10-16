@@ -23,6 +23,7 @@ Examples:
   - Hello World (`demo <https://siongui.github.io/frontend-programming-in-go/wasm/001-hello-world/demo/>`_)
   - querySelector (`demo <https://siongui.github.io/frontend-programming-in-go/wasm/002-querySelector/demo/>`_)
   - querySelectorAll (`demo <https://siongui.github.io/frontend-programming-in-go/wasm/003-querySelectorAll/demo/>`_)
+  - addEventListener (`demo <https://siongui.github.io/frontend-programming-in-go/wasm/004-addEventListener/demo/>`_)
 
 .. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
 .. _Go: https://golang.org/dl/
