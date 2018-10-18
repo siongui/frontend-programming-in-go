@@ -6,8 +6,8 @@ export GOPATH=$(realpath .)
 export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
 
 
-DIR=004-addEventListener
-MODULE=click.wasm
+DIR=005-xmlhttprequest-xhr
+MODULE=xhr.wasm
 
 server: build
 	@echo "\033[92mRunning dev server...\033[0m"

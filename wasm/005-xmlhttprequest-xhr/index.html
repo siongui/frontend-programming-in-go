@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Go wasm - XMLHttpRequest (XHR)</title>
+</head>
+<body>
+  Please open developer console to see the retrieved JSON data from server.
+
+  <!-- https://github.com/golang/go/blob/master/misc/wasm/wasm_exec.js -->
+  <script src="wasm_exec.js"></script>
+  <script>
+	const go = new Go();
+	let mod, inst;
+	WebAssembly.instantiateStreaming(
+		fetch("xhr.wasm", {cache: 'no-cache'}), go.importObject).then((result) => {
+		mod = result.module;
+		inst = result.instance;
+		run();
+	});
+	async function run() {
+		await go.run(inst);
+	};
+  </script>
+</body>
+</html>
